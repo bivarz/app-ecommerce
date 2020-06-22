@@ -6,11 +6,15 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 146px;
-
   background: #f2f2f2;
+
+  @media only screen and (max-width: 742px) {
+    display: flex;
+    flex-direction: column;
+  }
 
   .focused {
     border: 1px solid #d7182a;
@@ -85,15 +89,12 @@ export const Container = styled.div`
   }
 `;
 export const Content = styled.div`
-  background: pink;
-
   span {
     display: flex;
     justify-content: space-between;
     position: absolute;
     bottom: 9px;
     color: #d7182a;
-
     font-style: normal;
     font-weight: normal;
     font-size: 12px;
@@ -103,9 +104,49 @@ export const Content = styled.div`
 export const ContentMsg = styled.div`
   .content_msg {
     width: 100%;
+    max-width: 360px;
     display: block;
     align-items: center;
-    justify-content: column;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .content_msg_done {
+    width: 100%;
+    display: block;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 26px;
+    margin-bottom: 15px;
+
+    span {
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 14px;
+    }
+    p {
+      position: relative;
+      width: 100%;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 11.5px;
+      line-height: 10px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 15px;
+
+      color: #333333;
+    }
+  }
+  .content_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     button {
       display: flex;
@@ -125,43 +166,6 @@ export const ContentMsg = styled.div`
       color: #ffff;
       border: none;
       margin-left: 0px;
-    }
-  }
-  .content_msg_done {
-    width: 100%;
-    display: block;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    background: red;
-    height: 26px;
-    margin-bottom: 15px;
-
-    p {
-      position: relative;
-      width: 338px;
-      font-style: normal;
-
-      font-size: 14px;
-      line-height: 14px;
-      display: flex;
-      align-items: center;
-      text-align: center;
-
-      color: #000000;
-      margin-bottom: 10px;
-      margin-bottom: 15px;
-    }
-
-    span {
-      align-items: center;
-      text-align: center;
-      justify-content: center;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 14px;
-      line-height: 14px;
-      margin-bottom: 15px;
     }
   }
 `;

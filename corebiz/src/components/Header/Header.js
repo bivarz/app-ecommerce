@@ -19,7 +19,7 @@ export default function Header() {
 
         <Profile>
           <div className="profile_items">
-            <img src={userIcon} style={{ height: '23px ' }} alt="User" />
+            <img src={userIcon} style={{ height: '18px ' }} alt="User" />
             <p>Minha Conta</p>
             <img src={cartIcon} style={{ height: '18px ' }} alt="cart" />
             <span>1</span>

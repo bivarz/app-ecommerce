@@ -14,7 +14,7 @@ function MsgDone({ close }) {
               A partir de agora você receberá as novidade e ofertas exclusivas.
             </p>
           </div>
-          <div>
+          <div className="content_button">
             <button type="button" onClick={close}>
               Cadastrar novo e-mail!
             </button>
