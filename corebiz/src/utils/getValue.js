@@ -1,7 +1,5 @@
-import getNumbers from './getNumbers';
-
 function getValue(product) {
-  return product.installments.map((vl) => getNumbers(vl.value) * 100);
+  return product.installments.map((vl) => vl.value);
 }
 
 export default getValue;

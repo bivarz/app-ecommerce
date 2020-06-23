@@ -71,7 +71,7 @@ export const Profile = styled.div`
     span {
       width: 14px;
       height: 14px;
-      padding: 0 4px;
+      padding: 6 6px;
       color: white;
       background: #f8475f;
       text-align: center;

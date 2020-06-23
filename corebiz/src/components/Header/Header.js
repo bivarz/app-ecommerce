@@ -1,4 +1,5 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import userIcon from '../../assets/images/userIcon.svg';
 import searchIcon from '../../assets/images/searchIcon.svg';
 import cartIcon from '../../assets/images/cartIcon.svg';
@@ -6,6 +7,8 @@ import { Container, Content, Input, Profile } from './styles';
 import Img from '../../assets/images/logo.svg';
 
 export default function Header() {
+  const counter = useSelector((state) => state);
+
   return (
     <Container>
       <Content>
@@ -22,7 +25,7 @@ export default function Header() {
             <img src={userIcon} style={{ height: '18px ' }} alt="User" />
             <p>Minha Conta</p>
             <img src={cartIcon} style={{ height: '18px ' }} alt="cart" />
-            <span>1</span>
+            <span>{counter}</span>
           </div>
         </Profile>
       </Content>
