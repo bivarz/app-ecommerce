@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
-/* import { MdStar, MdStarBorder } from 'react-icons/md'; */
+import { MdStar, MdStarBorder } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
 import arrowLeft from '../../assets/images/arrowLeft.svg';
 import arrowRight from '../../assets/images/arrowRight.svg';
 import api from '../../services/api';
-import { getQuantity, getValue } from '../../utils';
+import { getQuantity, getValue, getAllStars } from '../../utils';
 import { formatPrice } from '../../utils/format';
 
 import { Container, Content } from './styles';
 
 function Products() {
   const [products, setProducts] = useState([]);
-  const selector = useSelector((state) => state);
+  const selector = useSelector((state) => state + 1);
 
   const dispatch = useDispatch();
 
@@ -52,7 +52,7 @@ function Products() {
   }
   function handleAddtocart() {
     dispatch({ type: 'INCREMENT' });
-    localStorage.setItem('@valueCart', selector + 1);
+    localStorage.setItem('@valueCart', selector);
   }
 
   return (
@@ -90,14 +90,13 @@ function Products() {
                     <span>{product.productName}</span>
                   </div>
                   <div className="list_down_stars">
-                    <span>{product.stars}</span>
+                    <span>
+                      {getAllStars(product.stars, MdStar, MdStarBorder)}
+                    </span>
                   </div>
                   <div className="list_down_price">
                     {getListPrice(product)}
-                    <span>
-                      por R$
-                      {product.priceFormatted}
-                    </span>
+                    <span>{`por ${product.priceFormatted}`}</span>
                     {getInstallments(product)}
                   </div>
                   <div className="list_down_button">

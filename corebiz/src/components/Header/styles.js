@@ -60,6 +60,11 @@ export const Profile = styled.div`
     justify-content: left;
     align-items: center;
 
+    button {
+      background: none;
+      border: none;
+    }
+
     img {
       margin-right: 3px;
     }
@@ -81,7 +86,6 @@ export const Profile = styled.div`
       font-size: 10px;
       line-height: 14px;
       align-items: center;
-
       border-radius: 10px;
     }
   }

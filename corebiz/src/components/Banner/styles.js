@@ -7,32 +7,90 @@ export const Container = styled.div`
   height: 100%;
   max-height: 430px;
   justify-content: center;
+  background: #000;
+
   width: 100%;
-  background: #f6f6;
 `;
 
 export const Content = styled.div`
+  width: 100%;
+  height: 100%;
   max-width: 1350px;
   max-height: 430px;
-  background: yellow;
+  overflow: hidden;
+  background: black;
 
   .banner {
-    max-height: 430px;
-    overflow: hidden;
     position: relative;
   }
+
+  .banner_text {
+    left: 110px;
+    top: 150px;
+    max-width: 480px;
+    position: absolute;
+    color: #fff;
+    z-index: 5;
+
+    span {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 41px;
+    }
+    p {
+      margin-top: 10px;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 47px;
+      line-height: 41px;
+    }
+  }
+
+  .banner_circles {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+  }
+  .banner_li {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+    height: 100%;
+
+    span {
+      margin-top: 390px;
+      margin-bottom: auto;
+      position: relative;
+      width: 10px;
+      max-width: 10px;
+      height: 10px;
+      color: #fff;
+      background: black;
+      clip-path: circle(50% at 50% 50%);
+      background: #bdbdbd;
+      z-index: 99;
+    }
+  }
+
   .banner_black {
+    float: left;
     max-height: 430px;
+    right: 50%;
     position: absolute;
     display: flex;
     align-items: right;
     justify-content: left;
-    z-index: 5;
-  }
+    z-index: 0;
+    height: 430px;
+    max-height: 430px;
 
-  .banner_text {
-    position: absolute;
-    color: #fff;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .banner_black_overflow {
@@ -44,12 +102,15 @@ export const Content = styled.div`
   }
 
   .banner_image {
-    background-image: url('banner_img.png');
+    float: right;
+    max-height: 431px;
+    height: 100%;
+  }
 
-    img {
-      width: 100%;
-      max-height: 430px;
-      height: 100%;
-    }
+  img {
+    width: 100%;
+    max-width: 1010px;
+    max-height: 430px;
+    height: 100%;
   }
 `;

@@ -110,6 +110,7 @@ export const Content = styled.div`
           font-size: 18px;
           line-height: 25px;
           text-align: center;
+
           color: #000;
         }
         p {
