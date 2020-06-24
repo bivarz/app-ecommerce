@@ -16,7 +16,7 @@ export const Container = styled.div`
 
   @media only screen and (max-width: 742px) {
     width: 100%;
-    height: 100%;
+    height: 386px;
     position: relative;
     min-width: 320px;
     display: flex;
@@ -35,6 +35,7 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   @media only screen and (max-width: 323px) {
     width: 320px;
     max-height: 386px;
@@ -45,6 +46,13 @@ export const Content = styled.div`
   .content_left {
     max-width: 216px;
     height: 176px;
+
+    @media only screen and (max-width: 323px) {
+      position: absolute;
+
+      top: 5px;
+      left: 15px;
+    }
 
     .content_left_title {
       position: relative;
@@ -90,6 +98,12 @@ export const Content = styled.div`
     display: block;
     align-items: center;
     justify-content: center;
+
+    @media only screen and (max-width: 323px) {
+      position: absolute;
+
+      top: 200px;
+    }
 
     span:first-child {
       /* ENTRE EM CONTATO */
@@ -164,5 +178,11 @@ export const Content = styled.div`
   }
   .content_right {
     padding: 5px;
+
+    @media only screen and (max-width: 323px) {
+      position: absolute;
+
+      top: 310px;
+    }
   }
 `;

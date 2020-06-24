@@ -142,6 +142,10 @@ export const Content = styled.div`
     font-weight: normal;
     font-size: 12px;
     line-height: 12px;
+
+    @media only screen and (max-width: 323px) {
+      visibility: hidden;
+    }
   }
 `;
 export const ContentMsg = styled.div`
