@@ -102,12 +102,12 @@ export const Container = styled.div`
       width: 288px;
       height: 48px;
       background: #ffffff;
-      margin-right: 8px;
+
       border-radius: 5px;
       padding: 16px;
       border: none;
       marging-left: 8px;
-      margim-top: 15px;
+      margim-top: 150px;
       margim-bottom: 15px;
     }
 
@@ -213,6 +213,10 @@ export const ContentMsg = styled.div`
       color: #ffff;
       border: none;
       margin-left: 0px;
+
+      @media only screen and (max-width: 323px) {
+        width: 288px;
+      }
     }
   }
 `;
