@@ -77,10 +77,12 @@ function Products() {
               <div key={product.productName} className="div_li">
                 <li>
                   {product.listPrice ? (
-                    <div className="off_div">
-                      <span className="list_product_off">
-                        <p>OFF</p>
-                      </span>
+                    <div style={{ position: 'relative' }}>
+                      <div className="off_div">
+                        <span className="list_product_off">
+                          <p>OFF</p>
+                        </span>
+                      </div>
                     </div>
                   ) : null}
 
@@ -105,6 +107,12 @@ function Products() {
                     </button>
                   </div>
                 </li>
+                <div className="banner_li">
+                  <span style={{ background: '#f8475f' }} />
+                  <span />
+                  <span />
+                  <span />
+                </div>
               </div>
             ))}
           </div>

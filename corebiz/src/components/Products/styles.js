@@ -16,6 +16,12 @@ export const Content = styled.div`
   max-width: 1213.08px;
   justify-content: space-between;
 
+  /* middle  */
+  @media only screen and (max-width: 742px) {
+    width: 100%;
+    display: flex;
+  }
+
   .title {
     position: absolute;
     width: 138px;
@@ -28,6 +34,20 @@ export const Content = styled.div`
     line-height: 27px;
     color: #000;
     margin-top: 29px;
+
+    @media only screen and (max-width: 320px) {
+      position: absolute;
+      width: 138px;
+      height: 28px;
+      margin-left: 10px;
+
+      font-style: normal;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 27px;
+      color: #000;
+      margin-top: 29px;
+    }
   }
   .title_line {
     position: absolute;
@@ -43,8 +63,12 @@ export const Content = styled.div`
     margin-top: 184px;
     background: none;
     border: none;
-
     height: 22px;
+
+    @media only screen and (max-width: 900px) {
+      display: flex;
+      display: none;
+    }
   }
   .content_left {
     display: flex;
@@ -66,8 +90,18 @@ export const Content = styled.div`
     margin-bottom: 69px;
     width: 100%;
     max-width: 1175.08px;
-    max-height: 501px;
+    max-height: 510px;
     list-style: none;
+
+    @media only screen and (max-width: 1020px) {
+      display: flex;
+      width: 100%;
+    }
+    @media only screen and (max-width: 320px) {
+      display: flex;
+      width: 100%;
+      overflow: hidden;
+    }
 
     .content_middle_itens {
       display: flex;
@@ -79,12 +113,35 @@ export const Content = styled.div`
       max-width: 1175.08px;
       max-height: 501px;
       list-style: none;
-      margin-right: 20px;
+      margin-right: 22px;
 
+      @media only screen and (max-width: 1020px) {
+        display: flex;
+        width: 100%;
+      }
+      @media only screen and (max-width: 900px) {
+        display: flex;
+        width: 100%;
+        margin-right: 5px;
+      }
+      @media only screen and (max-width: 753px) {
+        display: flex;
+        width: 100%;
+        margin-right: 5px;
+      }
+      .list_down_title {
+        span {
+          @media only screen and (max-width: 323px) {
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 14px;
+            text-align: center;
+          }
+        }
+      }
       .list_down_stars {
         margin-top: 3px;
         margin-bottom: 3px;
-
         left: 100px;
         top: 232px;
 
@@ -128,7 +185,6 @@ export const Content = styled.div`
         display: flex;
         align-items: center;
         flex-direction: column;
-
         margin-top: 20px;
         margin-left: 22px;
         width: 216px;
@@ -137,7 +193,31 @@ export const Content = styled.div`
         height: 353px;
         transition: 0.5s ease;
 
-        .div_list {
+        @media only screen and (max-width: 1020px) {
+          display: flex;
+          width: 100%;
+        }
+        @media only screen and (max-width: 900px) {
+          display: flex;
+          width: 100%;
+          margin-left: 5px;
+        }
+        @media only screen and (max-width: 753px) {
+          display: flex;
+          width: 100%;
+          margin-left: 5px;
+          margin-right: 5px;
+        }
+
+        @media only screen and (max-width: 323px) {
+          display: flex;
+          width: 132px;
+          height: 284px;
+          margin-right: 30px;
+          margin-top: -70px;
+        }
+
+        .div_li {
           width: 100%;
           max-width: 216px;
           min-width: 132px;
@@ -145,8 +225,22 @@ export const Content = styled.div`
 
         .off_div {
           position: relative;
+          align-items: right;
+          width: 100%;
           top: 0px;
           right: -24px;
+
+          @media only screen and (max-width: 842px) {
+            position: relative;
+            top: 0px;
+            right: -1px;
+          }
+
+          @media only screen and (max-width: 500px) {
+            position: relative;
+            top: 0px;
+            right: 2px;
+          }
         }
 
         .list_product_off {
@@ -155,10 +249,14 @@ export const Content = styled.div`
           max-width: 81.36px;
           height: 72px;
           color: #fff;
-          background: black;
-          position: absolute;
           clip-path: polygon(100% 0, 0 0, 100% 100%);
           background: #f8475f;
+
+          @media only screen and (max-width: 742px) {
+            width: 71px;
+            height: 62px;
+            max-height: 81.36px;
+          }
 
           p {
             position: relative;
@@ -168,6 +266,16 @@ export const Content = styled.div`
             font-size: 16px;
             line-height: 22px;
             color: #fff;
+
+            @media only screen and (max-width: 742px) {
+              position: relative;
+              top: -10px;
+              left: 10px;
+              font-weight: 600;
+              font-size: 10px;
+              line-height: 22px;
+              color: #fff;
+            }
           }
         }
 
@@ -237,6 +345,51 @@ export const Content = styled.div`
           align-items: center;
           text-align: center;
           visibility: visible;
+        }
+      }
+    }
+  }
+  .banner_li {
+    visibility: hidden;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 70px;
+    height: 100%;
+
+    span {
+      margin-top: 390px;
+      margin-bottom: auto;
+      position: relative;
+      width: 10px;
+      max-width: 10px;
+      height: 10px;
+      color: #fff;
+      background: black;
+      clip-path: circle(50% at 50% 50%);
+      background: #bdbdbd;
+      z-index: 99;
+
+      @media only screen and (max-width: 323px) {
+        visibility: visible;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 70px;
+        height: 100%;
+
+        span {
+          margin-top: 390px;
+          margin-bottom: auto;
+          position: relative;
+          width: 10px;
+          max-width: 10px;
+          height: 10px;
+          color: #fff;
+          background: black;
+          clip-path: circle(50% at 50% 50%);
+          background: #bdbdbd;
+          z-index: 99;
         }
       }
     }

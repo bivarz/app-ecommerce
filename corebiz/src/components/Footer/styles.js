@@ -11,9 +11,20 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 5px;
-
   background: #000000;
   border-bottom: 10px solid #c0c0c0;
+
+  @media only screen and (max-width: 742px) {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    min-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: #000000;
+  }
 `;
 export const Content = styled.div`
   width: 100%;
@@ -24,6 +35,12 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  @media only screen and (max-width: 323px) {
+    width: 320px;
+    max-height: 386px;
+    display: flex;
+    flex-direction: column;
+  }
 
   .content_left {
     max-width: 216px;

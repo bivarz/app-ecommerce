@@ -32,19 +32,49 @@ export const Content = styled.div`
     color: #fff;
     z-index: 5;
 
-    span {
-      font-style: normal;
-      font-weight: bold;
-      font-size: 32px;
-      line-height: 41px;
+    @media only screen and (max-width: 323px) {
+      min-width: 320px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 191.2px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: rgba(0, 0, 0, 0.55);
+      background-blend-mode: multiply;
+
+      span {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 41px;
+      }
+      p {
+        margin-top: 5px;
+        margin-left: 10px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 37px;
+        line-height: 41px;
+      }
     }
-    p {
-      margin-top: 10px;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 47px;
-      line-height: 41px;
-    }
+  }
+
+  span {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 41px;
+  }
+  p {
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 47px;
+    line-height: 41px;
   }
 
   .banner_circles {
@@ -87,6 +117,10 @@ export const Content = styled.div`
     height: 430px;
     max-height: 430px;
 
+    @media only screen and (max-width: 323px) {
+      visibility: hidden;
+    }
+
     img {
       width: 100%;
       height: 100%;
@@ -105,6 +139,9 @@ export const Content = styled.div`
     float: right;
     max-height: 431px;
     height: 100%;
+    @media only screen and (max-width: 323px) {
+      height: 191.2px;
+    }
   }
 
   img {

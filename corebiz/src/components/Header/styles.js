@@ -15,6 +15,32 @@ export const Content = styled.div`
   img {
     margin-left: 10px;
     height: 41px;
+
+    @media only screen and (max-width: 323px) {
+      margin-left: 10px;
+      visibility: visible;
+      margin-left: 10px;
+      height: 25px;
+    }
+  }
+
+  .logo {
+    @media only screen and (max-width: 323px) {
+      position: absolute;
+      left: 85px;
+      top: 10px;
+    }
+  }
+
+  .menu_hamburger {
+    visibility: hidden;
+
+    @media only screen and (max-width: 323px) {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      visibility: visible;
+    }
   }
 `;
 export const Input = styled.div`
@@ -23,6 +49,26 @@ export const Input = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 323px) {
+    position: absolute;
+    top: 15px;
+    z-index: 0;
+
+    input {
+      width: 100%;
+      border: 0px;
+      color: #7a7a7a;
+      font-family: Nunito;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 13px;
+      line-height: 18px;
+      margin-left: 20px;
+      padding: 3px 0px;
+      border-bottom: 1px solid #7a7a7a;
+    }
+  }
 
   input {
     max-width: 718px;
@@ -53,6 +99,33 @@ export const Profile = styled.div`
   max-width: 200px;
   width: 100%;
   height: 80px;
+
+  @media only screen and (max-width: 323px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .cart {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: 323px) {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      left: 255px;
+      top: 15px;
+    }
+  }
+
+  .user {
+    @media only screen and (max-width: 323px) {
+      position: absolute;
+      display: none;
+    }
+  }
 
   .profile_items {
     width: 100%;

@@ -11,9 +11,10 @@ export const Container = styled.div`
   height: 146px;
   background: #f2f2f2;
 
-  @media only screen and (max-width: 742px) {
+  @media only screen and (max-width: 323px) {
     display: flex;
     flex-direction: column;
+    height: 276px;
   }
 
   .focused {
@@ -43,6 +44,11 @@ export const Container = styled.div`
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
+    @media only screen and (max-width: 323px) {
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   button {
@@ -62,6 +68,25 @@ export const Container = styled.div`
     color: #ffff;
     border: none;
     margin-left: 0px;
+
+    @media only screen and (max-width: 323px) {
+      display: flex;
+      width: 288px;
+      height: 48px;
+      background: #000000;
+      border-radius: 5px;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #ffff;
+      border: none;
+      margin-left: 0px;
+    }
   }
   Input {
     width: 100%;
@@ -72,6 +97,19 @@ export const Container = styled.div`
     border-radius: 5px;
     padding: 16px;
     border: none;
+
+    @media only screen and (max-width: 323px) {
+      width: 288px;
+      height: 48px;
+      background: #ffffff;
+      margin-right: 8px;
+      border-radius: 5px;
+      padding: 16px;
+      border: none;
+      marging-left: 8px;
+      margim-top: 15px;
+      margim-bottom: 15px;
+    }
 
     ::placeholder {
       font-style: normal;
@@ -89,6 +127,11 @@ export const Container = styled.div`
   }
 `;
 export const Content = styled.div`
+  @media only screen and (max-width: 742px) {
+    display: flex;
+    flex-direction: column;
+  }
+
   span {
     display: flex;
     justify-content: space-between;

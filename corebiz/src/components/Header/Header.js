@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import { GiHamburgerMenu } from 'react-icons/gi';
 import userIcon from '../../assets/images/userIcon.svg';
 import searchIcon from '../../assets/images/searchIcon.svg';
 import cartIcon from '../../assets/images/cartIcon.svg';
@@ -13,7 +14,10 @@ export default function Header() {
     <Container>
       <Content>
         <nav>
-          <img src={Img} alt="logo_corebiz" />
+          <span className="menu_hamburger">
+            <GiHamburgerMenu />
+          </span>
+          <img className="logo" src={Img} alt="logo_corebiz" />
         </nav>
         <Input>
           <input type="text" placeholder="O que você está procurando?" />
@@ -22,12 +26,16 @@ export default function Header() {
 
         <Profile>
           <div className="profile_items">
-            <img src={userIcon} style={{ height: '18px ' }} alt="User" />
-            <button type="button">
-              <p>Minha Conta</p>{' '}
-            </button>
-            <img src={cartIcon} style={{ height: '18px ' }} alt="cart" />
-            <span>{counter}</span>
+            <div className="user">
+              <img src={userIcon} style={{ height: '18px ' }} alt="User" />
+              <button type="button">
+                <p>Minha Conta</p>{' '}
+              </button>
+            </div>
+            <div className="cart">
+              <img src={cartIcon} style={{ height: '18px ' }} alt="cart" />
+              <span>{counter}</span>{' '}
+            </div>
           </div>
         </Profile>
       </Content>
